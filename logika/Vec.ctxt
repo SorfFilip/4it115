@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nazev
+comment0.target=Vec(java.lang.String)
+comment0.text=\r\n\ Konstruktor\ \r\n\ @param\ nazev\ n\u00E1zev\ v\u011Bci\r\n\ @param\ prenositelna\ p\u0159enositelnost\ v\u011Bci,\ tj.\ zda\ hr\u00E1\u010D\ m\u016F\u017Ee\ \u010Di\ nem\u016F\u017Ee\ v\u011Bc\ z\ prostoru\ sebrat\ a\ odn\u00E9st\ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getNazev()
+comment1.text=\r\n\ Vrac\u00ED\ n\u00E1zev\ v\u011Bci\r\n\r\n\ @return\ n\u00E1zev\ v\u011Bci\r\n
+numComments=2
