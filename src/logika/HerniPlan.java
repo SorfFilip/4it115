@@ -1,6 +1,8 @@
 package logika;
 
-public class HerniPlan {
+import java.util.Observable;
+
+public class HerniPlan extends Observable{
 
     private Prostor aktualniProstor;
     private Prostor viteznyProstor;

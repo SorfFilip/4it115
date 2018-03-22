@@ -17,17 +17,27 @@ public class Start extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 700, 700));
-        primaryStage.show();
-    }
-
-    public static void main(String[] args) {
 
         IHra hra = new Hra();
         TextoveRozhrani ui = new TextoveRozhrani(hra);
-//        ui.hraj();
+//todo ->
+        //        ui.hraj();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("sample.fxml"));
+        Parent root = loader.load();
+
+        Controller controller = loader.getController();
+        controller.init(hra);
+
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 700, 700));
+        primaryStage.show();
+
+
+    }
+
+    public static void main(String[] args) {
 
         launch(args);
     }
