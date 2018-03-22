@@ -49,7 +49,8 @@ public class Controller extends GridPane implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        seznamMistnosti.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
+       System.out.println("updateeeeeeeee");
+//        seznamMistnosti.getItems().addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
 
     }
 

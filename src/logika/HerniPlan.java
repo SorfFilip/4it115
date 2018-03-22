@@ -1,6 +1,7 @@
 package logika;
 
 import java.util.Observable;
+import java.util.Observer;
 
 public class HerniPlan extends Observable{
 
@@ -61,6 +62,8 @@ public class HerniPlan extends Observable{
 
 
     public Prostor getAktualniProstor() {
+        this.setChanged();
+        this.notifyObservers();
         return aktualniProstor;
     }
 
