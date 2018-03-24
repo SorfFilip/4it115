@@ -5,6 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.collections.FXCollections?>
 <GridPane alignment="center" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
@@ -38,30 +39,21 @@
             </VBox>
          </children>
       </VBox>
-      <ListView prefHeight="600.0" prefWidth="200.0">
-         <contextMenu>
-            <ContextMenu>
-              <items>
-                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
-            </ContextMenu>
-         </contextMenu>
-      </ListView>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
          <children>
             <VBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="novaHra" onAction="#buttonClickHandler" mnemonicParsing="false" prefWidth="120.0" text="Nova hra">
+                  <Button fx:id="novaHra" mnemonicParsing="false" onAction="#novaHra" prefWidth="120.0" text="Nova hra">
                      <VBox.margin>
                         <Insets left="5.0" top="6.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="napoveda" onAction="#buttonClickHandler" mnemonicParsing="false" prefWidth="120.0" text="Napoveda">
+                  <Button fx:id="napoveda" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Napoveda">
                      <VBox.margin>
                         <Insets left="5.0" top="6.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="pomoc" onAction="#buttonClickHandler" mnemonicParsing="false" prefWidth="120.0" text="Pomoc">
+                  <Button fx:id="pomoc" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Pomoc">
                      <VBox.margin>
                         <Insets left="5.0" top="6.0" />
                      </VBox.margin>
@@ -82,6 +74,63 @@
                     <ListView fx:id="ja" prefHeight="150.0" prefWidth="200.0" />
                 </children>
             </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="500.0" prefWidth="200.0">
+         <children>
+             <Label text="Jdi" />
+             <ComboBox fx:id="jdiCombo" onAction="#jdiHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Jdi">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="cesta" />
+                         <String fx:value="kolej" />
+                         <String fx:value="domov" />
+                         <String fx:value="louka" />
+                         <String fx:value="chodba" />
+                         <String fx:value="sb202" />
+                     </FXCollections>
+                 </items>
+             </ComboBox>
+             <Label text="Seber" />
+             <ComboBox fx:id="seberCombo" onAction="#seberHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Seber">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="osatka" />
+                         <String fx:value="prestrojeni" />
+                         <String fx:value="jablka" />
+                         <String fx:value="semestralka" />
+                         <String fx:value="ukoly" />
+                     </FXCollections>
+                 </items>
+             </ComboBox>
+             <Label text="Odevzdej" />
+             <ComboBox fx:id="odevzdejCombo" onAction="#odevzdejHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Odevzdej">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="osatka" />
+                         <String fx:value="jablka" />
+                         <String fx:value="ukoly" />
+                         <String fx:value="semestralka" />
+                     </FXCollections>
+                 </items>
+             </ComboBox>
+             <Label text="Trhej" />
+             <ComboBox fx:id="trhejCombo" onAction="#trhejHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Trhej">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="jablka" />
+                     </FXCollections>
+                 </items>
+             </ComboBox>
+             <Label text="Vypracuj" />
+             <ComboBox fx:id="vypracujCombo" onAction="#vypracujHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Vypracuj">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="ukoly" />
+                     </FXCollections>
+                 </items>
+             </ComboBox>
+
          </children>
       </VBox>
    </children>

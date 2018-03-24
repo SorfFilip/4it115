@@ -56,7 +56,7 @@ public class Ja
     public Vec uplatit() {
         uplatek = null;
         osatka = null;
-        vsechnyVeciUSebe.remove("uplatek");
+        vsechnyVeciUSebe.remove("jablka");
         vsechnyVeciUSebe.remove("osatka");
         return null;
     } 

@@ -5,14 +5,9 @@ import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import logika.IHra;
-import logika.Prostor;
-import logika.Vec;
+import logika.*;
 
 
 public class Controller extends GridPane implements Observer {
@@ -29,7 +24,16 @@ public class Controller extends GridPane implements Observer {
     private ListView seznamVeci;
     @FXML
     private ListView ja;
-
+    @FXML
+    private ComboBox<String> jdiCombo;
+    @FXML
+    private ComboBox<String> seberCombo;
+    @FXML
+    private ComboBox<String> odevzdejCombo;
+    @FXML
+    private ComboBox<String> trhejCombo;
+    @FXML
+    private ComboBox<String> vypracujCombo;
 
     private IHra hra;
 
@@ -37,7 +41,7 @@ public class Controller extends GridPane implements Observer {
 
 
         String vypis = hra.zpracujPrikaz(textVstup.getText());
-        textVypis.appendText("\n--------\n" + textVstup.getText() + "\n--------\n");
+        textVypis.appendText("\n\n-> " + textVstup.getText() + " <-\n");
         textVypis.appendText(vypis);
         textVstup.setText("");
 
@@ -53,25 +57,68 @@ public class Controller extends GridPane implements Observer {
 
     @FXML
     private void buttonClickHandler(javafx.event.ActionEvent event) {
-
-        Node node = (Node) event.getSource() ;
+        Node node = (Node) event.getSource();
         String prikaz = node.getId();
 
-
-
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n--------\n" + textVstup.getText() + "\n--------\n");
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
         textVypis.appendText(vypis);
         textVstup.setText("");
 
-        if (hra.konecHry()) {
-            textVypis.appendText("\n\n Konec hry \n");
-            textVstup.setDisable(true);
-            odesli.setDisable(true);
-        }
+    }
 
-        System.out.println("odeslan prikaz");
+    @FXML
+    private void jdiHandler() {
+        String prikaz = "jdi " + jdiCombo.getValue();
+        String vypis = hra.zpracujPrikaz(prikaz);
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
 
+    @FXML
+    private void seberHandler() {
+        String prikaz = "seber " + seberCombo.getValue();
+        String vypis = hra.zpracujPrikaz(prikaz);
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
+
+    @FXML
+    private void odevzdejHandler() {
+        String prikaz = "odevzdej " + odevzdejCombo.getValue();
+        String vypis = hra.zpracujPrikaz(prikaz);
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
+
+    @FXML
+    private void vypracujHandler() {
+        String prikaz = "vypracuj " + vypracujCombo.getValue();
+        String vypis = hra.zpracujPrikaz(prikaz);
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
+
+    @FXML
+    private void trhejHandler() {
+        String prikaz = "trhej " + trhejCombo.getValue();
+        String vypis = hra.zpracujPrikaz(prikaz);
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
+
+    @FXML
+    private void novaHra() {
+        IHra hra = new Hra();
+        this.init(hra);
+        //self notify
+        HerniPlan plan = new HerniPlan();
+        this.update(plan, this);
     }
 
 
@@ -79,8 +126,6 @@ public class Controller extends GridPane implements Observer {
         this.hra = hra;
         textVypis.setText(hra.vratUvitani());
         System.out.println("initovano");
-
-
         hra.getHerniPlan().addObserver(this);
     }
 
@@ -100,7 +145,7 @@ public class Controller extends GridPane implements Observer {
         ja.getItems().clear();
         Map<String, Vec> vsechnyVeciUSebe = this.hra.getHerniPlan().getJa().getVsechnyVeciUsebe();
         for (String item : vsechnyVeciUSebe.keySet()) {
-               ja.getItems().add(vsechnyVeciUSebe.get(item).getNazev());
+            ja.getItems().add(vsechnyVeciUSebe.get(item).getNazev());
         }
 
     }

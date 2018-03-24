@@ -38,7 +38,7 @@ public class PrikazOdevzdej implements IPrikaz{
         {
 
             if (parametry[0].equals("ukoly")) 
-            {if (plan.jaInformace().vecCoNesu()!=null){
+            {if (plan.jaInformace().vecCoNesu().getNazev().equals("ukoly")){
                     plan.getAktualniProstor().vlozVec(plan.jaInformace().vecCoNesu());
                     plan.jaInformace().odevzdat();
                     plan.zmenaOdevzdatUkoly();
@@ -50,7 +50,7 @@ public class PrikazOdevzdej implements IPrikaz{
             else if (parametry[0].equals("semestralka")) 
             {
                 if(plan.odevzdaneUkoly()==1){
-                    if (plan.jaInformace().vecCoNesu()!=null){ 
+                    if (plan.jaInformace().vecCoNesu().getNazev().equals("semestralka")){
                         plan.getAktualniProstor().vlozVec(plan.jaInformace().vecCoNesu());
                         plan.jaInformace().odevzdat();
                         plan.zmenaOdevzdatSemestralku();
