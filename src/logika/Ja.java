@@ -22,7 +22,7 @@ public class Ja
         prestrojeni = null;
         osatka = null;
         uplatek = null;
-        vsechnyVeciUSebe = new HashMap<>();
+        vsechnyVeciUSebe = new HashMap<String, Vec>();
     }
 
 
