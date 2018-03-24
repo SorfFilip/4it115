@@ -32,6 +32,7 @@ public class PrikazTrhej implements IPrikaz{
         else {
 
             plan.jaInformace().uplatek(plan.getAktualniProstor().odeberVec("jablka"));
+            plan.notifyController();
             return "Natrhal si jablka a získal tím úplatek pr uklízečku!";
 
         }

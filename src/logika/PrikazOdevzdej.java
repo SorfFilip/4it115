@@ -24,6 +24,7 @@ public class PrikazOdevzdej implements IPrikaz{
                     plan.getAktualniProstor().vlozVec(plan.jaInformace().mamUplatek());
                     plan.jaInformace().uplatit();
                     plan.zmenauplat();
+                plan.notifyController();
                     return "Odevzdán úplatek (jablka)";}
                 else {return "Jablka nemáš u sebe!";}
             }
@@ -40,7 +41,8 @@ public class PrikazOdevzdej implements IPrikaz{
             {if (plan.jaInformace().vecCoNesu()!=null){
                     plan.getAktualniProstor().vlozVec(plan.jaInformace().vecCoNesu());
                     plan.jaInformace().odevzdat();
-                    plan.zmenaOdevzdatUkoly();   
+                    plan.zmenaOdevzdatUkoly();
+                plan.notifyController();
                     return "Odevzdány úkoly.";}
                 else {return "Nemáš u sebe úkoly!";}
             }
@@ -52,6 +54,7 @@ public class PrikazOdevzdej implements IPrikaz{
                         plan.getAktualniProstor().vlozVec(plan.jaInformace().vecCoNesu());
                         plan.jaInformace().odevzdat();
                         plan.zmenaOdevzdatSemestralku();
+                        plan.notifyController();
                         return "Odevzdána semestrálka.";}
                     else {return "Nemáš u sebe semestrálku!";}
                 }

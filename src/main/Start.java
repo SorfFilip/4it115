@@ -24,14 +24,14 @@ public class Start extends Application {
         //        ui.hraj();
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("sample.fxml"));
+        loader.setLocation(getClass().getResource("sample2.fxml"));
         Parent root = loader.load();
 
         Controller controller = loader.getController();
         controller.init(hra);
 
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 700, 700));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
 
 

@@ -32,12 +32,14 @@ public class PrikazSeber implements IPrikaz{
         if (sbirana.getNazev()=="osatka") {
             aktualniProstor.vlozVec(sbirana);
             plan.jaInformace().vezmiOsatku(plan.getAktualniProstor().odeberVec(parametry[0]));
+            plan.notifyController();
             return "Sebral si "+ sbirana.getNazev();
         }
 
         if (sbirana.getNazev()=="prestrojeni") {
             aktualniProstor.vlozVec(sbirana);
             plan.jaInformace().prestrojit(plan.getAktualniProstor().odeberVec(parametry[0]));
+            plan.notifyController();
             return "Právě si se přestrojil.";
         }
 
@@ -46,10 +48,12 @@ public class PrikazSeber implements IPrikaz{
                 plan.getAktualniProstor().vlozVec(plan.jaInformace().vecCoNesu());
                 pomocna = plan.jaInformace().vecCoNesu();
                 plan.jaInformace().vlozVec(plan.getAktualniProstor().odeberVec(parametry[0]));
+                plan.notifyController();
                 return "Sebral si "+ sbirana.getNazev()+ " äle nechal si tu "+ pomocna.getNazev();
             }
             else {
                 plan.jaInformace().vlozVec(plan.getAktualniProstor().odeberVec(parametry[0]));
+                plan.notifyController();
                 return "Sebral si "+ sbirana.getNazev();
             }
 

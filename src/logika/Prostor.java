@@ -95,6 +95,10 @@ public class Prostor {
         return Collections.unmodifiableCollection(vychody);
     }
 
+    public Map getVeci() {
+        return this.veci;
+    }
+
 
     public boolean vlozVec(Vec neco){
         if(veci.containsKey(neco.getNazev())){

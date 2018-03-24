@@ -1,9 +1,9 @@
 package logika;
 
 import java.util.Observable;
-import java.util.Observer;
 
-public class HerniPlan extends Observable{
+public class HerniPlan extends Observable
+{
 
     private Prostor aktualniProstor;
     private Prostor viteznyProstor;
@@ -62,14 +62,14 @@ public class HerniPlan extends Observable{
 
 
     public Prostor getAktualniProstor() {
-        this.setChanged();
-        this.notifyObservers();
+
         return aktualniProstor;
     }
 
 
     public void setAktualniProstor(Prostor prostor) {
         aktualniProstor = prostor;
+        notifyController();
     }
     
 
@@ -120,4 +120,13 @@ public class HerniPlan extends Observable{
         return proselVPrevleku;
     }
 
+    public Ja getJa(){
+        return ja;
+    }
+
+    public void notifyController(){
+        //todo -> asi muze bejt tady, ale checknout
+        this.setChanged();
+        this.notifyObservers();
+    }
 }

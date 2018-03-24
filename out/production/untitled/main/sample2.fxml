@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<GridPane fx:controller="main.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <VBox prefHeight="350.0" prefWidth="400.0" />
+            <VBox prefHeight="50.0" prefWidth="400.0">
+               <children>
+                  <TextField fx:id="textVstup" onAction="#odesliPrikaz" promptText="Vloz prikaz ...">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <TextArea fx:id="textVypis" prefHeight="200.0" prefWidth="400.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <ListView prefHeight="600.0" prefWidth="200.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </ListView>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ListView prefHeight="100.0" prefWidth="200.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </ListView>
+               </children>
+            </VBox>
+            <VBox prefHeight="500.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="seznamVychodu" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+                <children>
+                    <ListView fx:id="seznamVeci" prefHeight="150.0" prefWidth="200.0" />
+                </children>
+                <children>
+                    <ListView fx:id="ja" prefHeight="150.0" prefWidth="200.0" />
+                </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

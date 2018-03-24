@@ -23,6 +23,7 @@ public class PrikazVypracuj implements IPrikaz{
             plan.getAktualniProstor().vlozVec(ukoly);    
             Vec semestralka = new Vec("semestralka");
             plan.getAktualniProstor().vlozVec(semestralka);
+            plan.notifyController();
             return "Vypracoval si úkoly a semestrálka";
 
                    
