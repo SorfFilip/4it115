@@ -1,137 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.collections.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.collections.FXCollections?>
-<GridPane alignment="center" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-         <children>
-            <VBox prefHeight="350.0" prefWidth="400.0" />
-            <VBox prefHeight="50.0" prefWidth="400.0">
-               <children>
-                  <TextField fx:id="textVstup" onAction="#odesliPrikaz" promptText="Vloz prikaz ...">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="400.0">
-               <children>
-                  <TextArea fx:id="textVypis" prefHeight="200.0" prefWidth="400.0">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
-                     </VBox.margin>
-                  </TextArea>
-               </children>
-            </VBox>
-         </children>
-      </VBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-         <children>
-            <VBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button fx:id="novaHra" mnemonicParsing="false" onAction="#novaHra" prefWidth="120.0" text="Nova hra">
-                     <VBox.margin>
-                        <Insets left="5.0" top="6.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="napoveda" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Napoveda">
-                     <VBox.margin>
-                        <Insets left="5.0" top="6.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="pomoc" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Pomoc">
-                     <VBox.margin>
-                        <Insets left="5.0" top="6.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox prefHeight="500.0" prefWidth="200.0">
-               <children>
-                   <Label text="Seznam vychodu" />
-                  <ListView fx:id="seznamVychodu" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-                <children>
-                    <Label text="Seznam veci v teto mistnosti" />
-                    <ListView fx:id="seznamVeci" prefHeight="150.0" prefWidth="200.0" />
-                </children>
-                <children>
-                  <Label text="Veci co mam u sebe (batoh)" />
-                    <ListView fx:id="ja" prefHeight="150.0" prefWidth="200.0" />
-                </children>
-            </VBox>
-         </children>
-      </VBox>
-      <VBox prefHeight="500.0" prefWidth="200.0">
-         <children>
-             <Label text="Jdi" />
-             <ComboBox fx:id="jdiCombo" onAction="#jdiHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Jdi">
-                 <items>
-                     <FXCollections fx:factory="observableArrayList">
-                         <String fx:value="cesta" />
-                         <String fx:value="kolej" />
-                         <String fx:value="domov" />
-                         <String fx:value="louka" />
-                         <String fx:value="chodba" />
-                         <String fx:value="sb202" />
-                     </FXCollections>
-                 </items>
-             </ComboBox>
-             <Label text="Seber" />
-             <ComboBox fx:id="seberCombo" onAction="#seberHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Seber">
-                 <items>
-                     <FXCollections fx:factory="observableArrayList">
-                         <String fx:value="osatka" />
-                         <String fx:value="prestrojeni" />
-                         <String fx:value="jablka" />
-                         <String fx:value="semestralka" />
-                         <String fx:value="ukoly" />
-                     </FXCollections>
-                 </items>
-             </ComboBox>
-             <Label text="Odevzdej" />
-             <ComboBox fx:id="odevzdejCombo" onAction="#odevzdejHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Odevzdej">
-                 <items>
-                     <FXCollections fx:factory="observableArrayList">
-                         <String fx:value="osatka" />
-                         <String fx:value="jablka" />
-                         <String fx:value="ukoly" />
-                         <String fx:value="semestralka" />
-                     </FXCollections>
-                 </items>
-             </ComboBox>
-             <Label text="Trhej" />
-             <ComboBox fx:id="trhejCombo" onAction="#trhejHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Trhej">
-                 <items>
-                     <FXCollections fx:factory="observableArrayList">
-                         <String fx:value="jablka" />
-                     </FXCollections>
-                 </items>
-             </ComboBox>
-             <Label text="Vypracuj" />
-             <ComboBox fx:id="vypracujCombo" onAction="#vypracujHandler" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Vypracuj">
-                 <items>
-                     <FXCollections fx:factory="observableArrayList">
-                         <String fx:value="ukoly" />
-                     </FXCollections>
-                 </items>
-             </ComboBox>
 
-         </children>
-      </VBox>
-   </children>
+<GridPane alignment="center" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+            <children>
+                <VBox prefHeight="100.0" prefWidth="100.0" />
+                <VBox prefHeight="300.0" prefWidth="400.0">
+                    <children>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Polygon fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                        <Label text="Kolej" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="50.0" prefWidth="400.0">
+                    <children>
+                        <TextField fx:id="textVstup" onAction="#odesliPrikaz" promptText="Vloz prikaz ...">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="400.0">
+                    <children>
+                        <TextArea fx:id="textVypis" prefHeight="150.0" prefWidth="400.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                            </VBox.margin>
+                        </TextArea>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+            <children>
+                <VBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="novaHra" mnemonicParsing="false" onAction="#novaHra" prefWidth="120.0" text="Nova hra">
+                            <VBox.margin>
+                                <Insets left="5.0" top="6.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="napoveda" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Napoveda">
+                            <VBox.margin>
+                                <Insets left="5.0" top="6.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="pomoc" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Pomoc">
+                            <VBox.margin>
+                                <Insets left="5.0" top="6.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="500.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Seznam vychodu" />
+                        <ListView fx:id="seznamVychodu" prefHeight="200.0" prefWidth="200.0" />
+                    </children>
+                    <children>
+                        <Label text="Seznam veci v teto mistnosti" />
+                        <ListView fx:id="seznamVeci" prefHeight="150.0" prefWidth="200.0" />
+                    </children>
+                    <children>
+                        <Label text="Veci co mam u sebe (batoh)" />
+                        <ListView fx:id="ja" prefHeight="150.0" prefWidth="200.0" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="500.0" prefWidth="200.0">
+            <children>
+                <Label text="Jdi" />
+                <ComboBox fx:id="jdiCombo" layoutX="15.0" layoutY="33.0" onAction="#jdiHandler" prefWidth="90.0" promptText="Jdi">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="cesta" />
+                            <String fx:value="kolej" />
+                            <String fx:value="domov" />
+                            <String fx:value="louka" />
+                            <String fx:value="chodba" />
+                            <String fx:value="sb202" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label text="Seber" />
+                <ComboBox fx:id="seberCombo" layoutX="15.0" layoutY="33.0" onAction="#seberHandler" prefWidth="90.0" promptText="Seber">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="osatka" />
+                            <String fx:value="prestrojeni" />
+                            <String fx:value="jablka" />
+                            <String fx:value="semestralka" />
+                            <String fx:value="ukoly" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label text="Odevzdej" />
+                <ComboBox fx:id="odevzdejCombo" layoutX="15.0" layoutY="33.0" onAction="#odevzdejHandler" prefWidth="90.0" promptText="Odevzdej">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="osatka" />
+                            <String fx:value="jablka" />
+                            <String fx:value="ukoly" />
+                            <String fx:value="semestralka" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label text="Trhej" />
+                <ComboBox fx:id="trhejCombo" layoutX="15.0" layoutY="33.0" onAction="#trhejHandler" prefWidth="90.0" promptText="Trhej">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="jablka" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label text="Vypracuj" />
+                <ComboBox fx:id="vypracujCombo" layoutX="15.0" layoutY="33.0" onAction="#vypracujHandler" prefWidth="90.0" promptText="Vypracuj">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="ukoly" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+            </children>
+        </VBox>
+    </children>
 </GridPane>
