@@ -20,7 +20,7 @@ public class Controller extends GridPane implements Observer {
     @FXML
     private TextArea textVypis;
     @FXML
-    private Button odesli;
+    private Button napoveda, pomoc;
     @FXML
     private ListView seznamVychodu, seznamVeci, ja;
     @FXML
@@ -40,7 +40,7 @@ public class Controller extends GridPane implements Observer {
         if (hra.konecHry()) {
             textVypis.appendText("\n\n Konec hry \n");
             textVstup.setDisable(true);
-            odesli.setDisable(true);
+
         }
 
         System.out.println("odeslan prikaz");
@@ -76,6 +76,10 @@ public class Controller extends GridPane implements Observer {
         String prikaz = "odevzdej " + odevzdejCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
+
+        if (this.hra.konecHry()) {
+            this.disableButtons(true);
+        }
     }
 
     @FXML
@@ -120,9 +124,23 @@ public class Controller extends GridPane implements Observer {
 
         hra.getHerniPlan().addObserver(this);
 
+        this.disableButtons(false);
+
         //self notify
         HerniPlan plan = new HerniPlan();
         this.update(plan, this);
+    }
+
+    private void disableButtons(Boolean bool) {
+        textVypis.appendText("\n\n Konec hry \n");
+        textVstup.setDisable(bool);
+        jdiCombo.setDisable(bool);
+        seberCombo.setDisable(bool);
+        odevzdejCombo.setDisable(bool);
+        vypracujCombo.setDisable(bool);
+        trhejCombo.setDisable(bool);
+        napoveda.setDisable(bool);
+        pomoc.setDisable(bool);
     }
 
     @Override
@@ -146,12 +164,12 @@ public class Controller extends GridPane implements Observer {
             ja.getItems().add(vsechnyVeciUSebe.get(item).getNazev());
         }
 
-       this.obarvi(aktualniProstor);
+        this.obarvi(aktualniProstor);
 
 
     }
 
-    private void obarvi(Prostor aktualniProstorP){
+    private void obarvi(Prostor aktualniProstorP) {
 
         String aktualniProstor = aktualniProstorP.getNazev();
 
