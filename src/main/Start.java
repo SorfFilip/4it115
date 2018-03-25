@@ -30,7 +30,7 @@ public class Start extends Application {
         Controller controller = loader.getController();
         controller.init(hra);
 
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Adventura - Sorf00");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
 

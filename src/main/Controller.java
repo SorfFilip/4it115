@@ -1,12 +1,15 @@
 package main;
 
-import java.awt.event.ActionEvent;
 import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import logika.*;
 
 
@@ -19,31 +22,20 @@ public class Controller extends GridPane implements Observer {
     @FXML
     private Button odesli;
     @FXML
-    private ListView seznamVychodu;
+    private ListView seznamVychodu, seznamVeci, ja;
     @FXML
-    private ListView seznamVeci;
+    private ComboBox<String> jdiCombo, seberCombo, odevzdejCombo, trhejCombo, vypracujCombo;
     @FXML
-    private ListView ja;
-    @FXML
-    private ComboBox<String> jdiCombo;
-    @FXML
-    private ComboBox<String> seberCombo;
-    @FXML
-    private ComboBox<String> odevzdejCombo;
-    @FXML
-    private ComboBox<String> trhejCombo;
-    @FXML
-    private ComboBox<String> vypracujCombo;
+    private javafx.scene.shape.Polygon kolej, cesta, domov, louka, sb202, chodba;
+
+    private HashMap<String, javafx.scene.shape.Polygon> stringMapOctagon;
 
     private IHra hra;
 
     public void odesliPrikaz() {
 
-
         String vypis = hra.zpracujPrikaz(textVstup.getText());
-        textVypis.appendText("\n\n-> " + textVstup.getText() + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(textVstup.getText(), vypis);
 
         if (hra.konecHry()) {
             textVypis.appendText("\n\n Konec hry \n");
@@ -56,14 +48,12 @@ public class Controller extends GridPane implements Observer {
     }
 
     @FXML
-    private void buttonClickHandler(javafx.event.ActionEvent event) {
+    private void napovedaPomocHandler(javafx.event.ActionEvent event) {
         Node node = (Node) event.getSource();
         String prikaz = node.getId();
 
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
 
     }
 
@@ -71,74 +61,82 @@ public class Controller extends GridPane implements Observer {
     private void jdiHandler() {
         String prikaz = "jdi " + jdiCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
     }
 
     @FXML
     private void seberHandler() {
         String prikaz = "seber " + seberCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
     }
 
     @FXML
     private void odevzdejHandler() {
         String prikaz = "odevzdej " + odevzdejCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
     }
 
     @FXML
     private void vypracujHandler() {
         String prikaz = "vypracuj " + vypracujCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
     }
 
     @FXML
     private void trhejHandler() {
         String prikaz = "trhej " + trhejCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
-        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
-        textVypis.appendText(vypis);
-        textVstup.setText("");
+        this.vypisText(prikaz, vypis);
     }
 
     @FXML
     private void novaHra() {
         IHra hra = new Hra();
         this.init(hra);
+
+    }
+
+    private void vypisText(String prikaz, String vypis) {
+        textVypis.appendText("\n\n-> " + prikaz + " <-\n");
+        textVypis.appendText(vypis);
+        textVstup.setText("");
+    }
+
+    public void init(IHra hra) {
+        this.hra = hra;
+
+        stringMapOctagon = new HashMap<>();
+        stringMapOctagon.put("kolej", kolej);
+        stringMapOctagon.put("cesta", cesta);
+        stringMapOctagon.put("domov", domov);
+        stringMapOctagon.put("louka", louka);
+        stringMapOctagon.put("chodba", chodba);
+        stringMapOctagon.put("sb202", sb202);
+
+        textVypis.setText(hra.vratUvitani());
+
+        hra.getHerniPlan().addObserver(this);
+
         //self notify
         HerniPlan plan = new HerniPlan();
         this.update(plan, this);
     }
 
-
-    public void init(IHra hra) {
-        this.hra = hra;
-        textVypis.setText(hra.vratUvitani());
-        System.out.println("initovano");
-        hra.getHerniPlan().addObserver(this);
-    }
-
     @Override
     public void update(Observable o, Object arg) {
 
+        Prostor aktualniProstor = this.hra.getHerniPlan().getAktualniProstor();
+
         seznamVychodu.getItems().clear();
-        for (Prostor item : this.hra.getHerniPlan().getAktualniProstor().getVychody()) {
+        for (Prostor item : aktualniProstor.getVychody()) {
             seznamVychodu.getItems().add(item.getNazev());
         }
 
         seznamVeci.getItems().clear();
-        for (Object item : this.hra.getHerniPlan().getAktualniProstor().getVeci().keySet()) {
+        for (Object item : aktualniProstor.getVeci().keySet()) {
             seznamVeci.getItems().add(item);
         }
 
@@ -148,6 +146,19 @@ public class Controller extends GridPane implements Observer {
             ja.getItems().add(vsechnyVeciUSebe.get(item).getNazev());
         }
 
+       this.obarvi(aktualniProstor);
+
+
+    }
+
+    private void obarvi(Prostor aktualniProstorP){
+
+        String aktualniProstor = aktualniProstorP.getNazev();
+
+        for (String key : stringMapOctagon.keySet()) {
+            stringMapOctagon.get(key).setFill(null);
+        }
+        stringMapOctagon.get(aktualniProstor).setFill(Color.ORANGE);
     }
 
 }

@@ -125,7 +125,6 @@ public class HerniPlan extends Observable
     }
 
     public void notifyController(){
-        //todo -> asi muze bejt tady, ale checknout
         this.setChanged();
         this.notifyObservers();
     }

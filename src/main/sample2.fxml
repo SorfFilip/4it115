@@ -7,7 +7,6 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.collections.FXCollections?>
 
 <GridPane alignment="center" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
     <columnConstraints>
@@ -35,9 +34,10 @@
                                 <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
                                 <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
                                 <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
                             </rowConstraints>
                             <children>
-                                <Polygon fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1">
+                                <Polygon fx:id="kolej" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="0" GridPane.rowIndex="1">
                                     <points>
                                         <Double fx:value="0.0" />
                                         <Double fx:value="25.0" />
@@ -57,7 +57,7 @@
                                         <Double fx:value="0.0" />
                                     </points>
                                 </Polygon>
-                        <Label text="Kolej" GridPane.rowIndex="1">
+                        <Label text="Kolej" GridPane.columnIndex="0" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="20.0" />
                            </GridPane.margin>
@@ -65,6 +65,161 @@
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Label>
+                            </children>
+
+                            <children>
+                                <Polygon fx:id="louka" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                                <Label text="Louka" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <GridPane.margin>
+                                        <Insets left="24.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+
+                            <children>
+                                <Polygon fx:id="cesta" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                                <Label text="Cesta" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="22.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+
+                            <children>
+                                <Polygon fx:id="domov" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                                <Label text="Domov" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="12.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+
+                            <children>
+                                <Polygon fx:id="chodba" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                                <Label text="Chodba" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="12.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+
+                            <children>
+                                <Polygon fx:id="sb202" fill="#00000000" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <points>
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="100.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="75.0" />
+                                        <Double fx:value="0.0" />
+                                        <Double fx:value="25.0" />
+                                        <Double fx:value="0.0" />
+                                    </points>
+                                </Polygon>
+                                <Label text="SB202" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Label>
                             </children>
                         </GridPane>
                     </children>
@@ -98,12 +253,12 @@
                                 <Insets left="5.0" top="6.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="napoveda" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Napoveda">
+                        <Button fx:id="napoveda" mnemonicParsing="false" onAction="#napovedaPomocHandler" prefWidth="120.0" text="Napoveda">
                             <VBox.margin>
                                 <Insets left="5.0" top="6.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="pomoc" mnemonicParsing="false" onAction="#buttonClickHandler" prefWidth="120.0" text="Pomoc">
+                        <Button fx:id="pomoc" mnemonicParsing="false" onAction="#napovedaPomocHandler" prefWidth="120.0" text="Pomoc">
                             <VBox.margin>
                                 <Insets left="5.0" top="6.0" />
                             </VBox.margin>

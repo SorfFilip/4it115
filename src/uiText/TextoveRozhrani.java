@@ -12,7 +12,7 @@ public class TextoveRozhrani {
         this.hra = hra;
     }
 
-//todo cyklus pro hrani a prijimani prikazu
+
     public void hraj() {
         System.out.println(hra.vratUvitani());
 
