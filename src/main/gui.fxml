@@ -253,7 +253,7 @@
                                 <Insets left="5.0" top="6.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="napoveda" mnemonicParsing="false" onAction="#napovedaPomocHandler" prefWidth="120.0" text="Napoveda">
+                        <Button fx:id="napoveda" mnemonicParsing="false" onAction="#napovedaHandler" prefWidth="120.0" text="Napoveda">
                             <VBox.margin>
                                 <Insets left="5.0" top="6.0" />
                             </VBox.margin>

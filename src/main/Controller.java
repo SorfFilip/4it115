@@ -1,15 +1,21 @@
 package main;
 
+import java.io.File;
 import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 import logika.*;
 
 
@@ -54,6 +60,27 @@ public class Controller extends GridPane implements Observer {
 
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
+
+    }
+
+    @FXML
+    private void napovedaHandler() {
+
+
+        StackPane secondaryLayout = new StackPane();
+        Scene secondScene = new Scene(secondaryLayout, 400, 400);
+        Stage newWindow = new Stage();
+        newWindow.setTitle("Napoveda");
+        newWindow.setScene(secondScene);
+
+        WebView browser = new WebView();
+        WebEngine webEngine = browser.getEngine();
+
+        String napovedaPath = getClass().getProtectionDomain().getCodeSource().getLocation() + "../../../napoveda.html";
+        webEngine.load(napovedaPath);
+
+        secondaryLayout.getChildren().add(browser);
+        newWindow.show();
 
     }
 
@@ -132,7 +159,9 @@ public class Controller extends GridPane implements Observer {
     }
 
     private void disableButtons(Boolean bool) {
-        textVypis.appendText("\n\n Konec hry \n");
+        if (bool) {
+            textVypis.appendText("\n\n Konec hry \n");
+        }
         textVstup.setDisable(bool);
         jdiCombo.setDisable(bool);
         seberCombo.setDisable(bool);

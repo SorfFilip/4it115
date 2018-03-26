@@ -19,12 +19,10 @@ public class Start extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         IHra hra = new Hra();
-        TextoveRozhrani ui = new TextoveRozhrani(hra);
-//todo ->
-        //        ui.hraj();
+        new TextoveRozhrani(hra);
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("sample2.fxml"));
+        loader.setLocation(getClass().getResource("gui.fxml"));
         Parent root = loader.load();
 
         Controller controller = loader.getController();
@@ -38,11 +36,14 @@ public class Start extends Application {
     }
 
     public static void main(String[] args) {
-
-        launch(args);
+        if (args.length != 0 && args[0].equals("text")) {
+            IHra hra = new Hra();
+            TextoveRozhrani ui = new TextoveRozhrani(hra);
+            ui.hraj();
+        } else {
+            launch(args);
+        }
     }
-
-
 
 
 }
