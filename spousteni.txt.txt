@@ -1,0 +1,1 @@
+java -classpath "C:\Users\Fii\Desktop\softwarko\github-repo\out\production\untitled;" main.Start

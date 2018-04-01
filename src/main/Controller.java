@@ -18,7 +18,13 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import logika.*;
 
-
+/*******************************************************************************
+ * Třída  Controller
+ * obsahuje logiku grafickeho rozhrani
+ *
+ * @author    Filip Šorf
+ * @version   LS 2018
+ */
 public class Controller extends GridPane implements Observer {
 
     @FXML
@@ -37,7 +43,9 @@ public class Controller extends GridPane implements Observer {
     private HashMap<String, javafx.scene.shape.Polygon> stringMapOctagon;
 
     private IHra hra;
-
+    /**
+     *  Metoda odesilajici textovy prikaz zadany v textovem poli
+     */
     public void odesliPrikaz() {
 
         String vypis = hra.zpracujPrikaz(textVstup.getText());
@@ -52,7 +60,11 @@ public class Controller extends GridPane implements Observer {
         System.out.println("odeslan prikaz");
 
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     *
+     *  @param event udalost zachycena buttonem
+     */
     @FXML
     private void napovedaPomocHandler(javafx.event.ActionEvent event) {
         Node node = (Node) event.getSource();
@@ -62,7 +74,9 @@ public class Controller extends GridPane implements Observer {
         this.vypisText(prikaz, vypis);
 
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void napovedaHandler() {
 
@@ -83,21 +97,27 @@ public class Controller extends GridPane implements Observer {
         newWindow.show();
 
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void jdiHandler() {
         String prikaz = "jdi " + jdiCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void seberHandler() {
         String prikaz = "seber " + seberCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void odevzdejHandler() {
         String prikaz = "odevzdej " + odevzdejCombo.getValue();
@@ -108,34 +128,45 @@ public class Controller extends GridPane implements Observer {
             this.disableButtons(true);
         }
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void vypracujHandler() {
         String prikaz = "vypracuj " + vypracujCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void trhejHandler() {
         String prikaz = "trhej " + trhejCombo.getValue();
         String vypis = hra.zpracujPrikaz(prikaz);
         this.vypisText(prikaz, vypis);
     }
-
+    /**
+     *  Zachyceni udalosti vyvolane buttonem
+     */
     @FXML
     private void novaHra() {
         IHra hra = new Hra();
         this.init(hra);
 
     }
-
+    /**
+     *  Metoda pro vypis textu do textoveho pole
+     */
     private void vypisText(String prikaz, String vypis) {
         textVypis.appendText("\n\n-> " + prikaz + " <-\n");
         textVypis.appendText(vypis);
         textVstup.setText("");
     }
 
+    /**
+     *  Metoda pro nastaveni promennych prostredi
+     */
     public void init(IHra hra) {
         this.hra = hra;
 
@@ -157,7 +188,9 @@ public class Controller extends GridPane implements Observer {
         HerniPlan plan = new HerniPlan();
         this.update(plan, this);
     }
-
+    /**
+     *  Metoda pro disablovani / enablovani buttonu
+     */
     private void disableButtons(Boolean bool) {
         if (bool) {
             textVypis.appendText("\n\n Konec hry \n");
@@ -172,6 +205,9 @@ public class Controller extends GridPane implements Observer {
         pomoc.setDisable(bool);
     }
 
+    /**
+     *  Metoda implementovana ze tridy Observer, spousti se pri zachyceni udalosti notify
+     */
     @Override
     public void update(Observable o, Object arg) {
 
@@ -197,7 +233,9 @@ public class Controller extends GridPane implements Observer {
 
 
     }
-
+    /**
+     *  Metoda pro obarvovani aktualni pozice v hernim planu
+     */
     private void obarvi(Prostor aktualniProstorP) {
 
         String aktualniProstor = aktualniProstorP.getNazev();

@@ -14,14 +14,23 @@ public class PrikazTrhej implements IPrikaz{
     private HerniPlan plan;
     private Ja batoh;
     private Vec veci;  
-    private Vec pomocna; 
+    private Vec pomocna;
 
-
+    /**
+     *  Konstruktor třídy
+     *
+     *  @param plan herní plán, ve kterém se budou ve hře trhat věci
+     */
     public PrikazTrhej(HerniPlan plan) {
         this.plan = plan;
     }
 
-
+    /**
+     *  Provádí příkaz "trhej". Zkouší se utrhnout jakoukoliv věc, lze trhat pouze "jablka" pokud má hráč u sebe věc "ošatka".
+     *  Pokud se hráč pokouší trhat jinde, než na louce, nebo bez věci "ošatka", vypíše se chybové hlášení.
+     *
+     *@return zpráva, kterou vypíše hra hráči
+     */
     @Override
     public String proved(String... parametry) {
         if (plan.jaInformace().mamOsatku()==null) {
@@ -39,6 +48,11 @@ public class PrikazTrhej implements IPrikaz{
     }
 
 
+    /**
+     *  Metoda vrací název příkazu (slovo které používá hráč pro jeho vyvolání)
+     *
+     *  @ return nazev prikazu
+     */
     @Override
     public String getNazev() {
         return NAZEV;

@@ -11,10 +11,20 @@ import javafx.stage.Stage;
 import logika.*;
 import uiText.TextoveRozhrani;
 
-
+/*******************************************************************************
+ * Třída  Start je hlavní třídou projektu,
+ * který představuje jednoduchou textovou adventuru určenou k dalším úpravám a rozšiřování
+ *
+ * @author    Jarmila Pavlíčková, Filip Šorf
+ * @version   ZS 2015/2016
+ */
 public class Start extends Application {
 
-
+    /***************************************************************************
+     * Metoda, prostřednictvím níž se spouští okno aplikace.
+     *
+     * @param primaryStage Parametr jfx
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
 
@@ -34,7 +44,11 @@ public class Start extends Application {
 
 
     }
-
+    /***************************************************************************
+     * Metoda, prostřednictvím níž se spouští celá aplikace.
+     *
+     * @param args Parametry příkazového řádku
+     */
     public static void main(String[] args) {
         if (args.length != 0 && args[0].equals("text")) {
             IHra hra = new Hra();

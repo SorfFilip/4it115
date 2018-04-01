@@ -1,19 +1,34 @@
 
 package logika;
 
-
+/**
+ *  Třída PrikazOdevzdej implementuje pro hru příkaz seber.
+ *  Tato třída je součástí jednoduché textové hry.
+ *
+ *@author     Filip Šorf
+ *@version    pro školní rok 2015/2016
+ */
 public class PrikazOdevzdej implements IPrikaz{
 
     private static final String NAZEV = "odevzdej";
     private HerniPlan plan;
-    
 
 
+    /**
+     *  Konstruktor třídy
+     *
+     *  @param plan herní plán, ve kterém se budou ve hře sbírat věci
+     */
     public PrikazOdevzdej(HerniPlan plan) {
         this.plan = plan;
     }
 
-
+    /**
+     *  Provádí příkaz "Odevzdej". Zkouší se odevzdatt požadovanou věc, věc musí být v ruckách, nebo v ošatce a musí ji bžt komu odevzdat.
+     *  Pokud věc hráč nemá u sebe nebo nejsou splněny podmínky odevzdání, vypíše se chybové hlášení.
+     *
+     *@return zpráva, kterou vypíše hra hráči
+     */
     @Override
     public String proved(String... parametry) {
         if(plan.getAktualniProstor().getNazev()=="chodba") 
