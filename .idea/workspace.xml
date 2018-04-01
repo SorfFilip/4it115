@@ -1,44 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="untitled:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="29f4303d-8308-4c45-8527-0db13cb99865" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/HerniPlan.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/HerniPlan.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/Hra.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/Hra.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/Ja.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/Ja.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazJdi.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazJdi.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazKonec.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazKonec.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazNapoveda.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazNapoveda.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazOdevzdej.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazOdevzdej.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazPomoc.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazPomoc.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazSeber.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazSeber.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazTrhej.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazTrhej.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/PrikazVypracuj.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/PrikazVypracuj.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/Prostor.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/Prostor.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/SeznamPrikazu.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/SeznamPrikazu.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/logika/Vec.class" afterPath="$PROJECT_DIR$/out/production/untitled/logika/Vec.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/main/Controller.class" afterPath="$PROJECT_DIR$/out/production/untitled/main/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/main/Start.class" afterPath="$PROJECT_DIR$/out/production/untitled/main/Start.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/uiText/TextoveRozhrani.class" afterPath="$PROJECT_DIR$/out/production/untitled/uiText/TextoveRozhrani.class" />
-      <change beforePath="$PROJECT_DIR$/src/logika/HerniPlan.java" afterPath="$PROJECT_DIR$/src/logika/HerniPlan.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/Hra.java" afterPath="$PROJECT_DIR$/src/logika/Hra.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/IHra.java" afterPath="$PROJECT_DIR$/src/logika/IHra.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/IPrikaz.java" afterPath="$PROJECT_DIR$/src/logika/IPrikaz.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/Ja.java" afterPath="$PROJECT_DIR$/src/logika/Ja.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazJdi.java" afterPath="$PROJECT_DIR$/src/logika/PrikazJdi.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazKonec.java" afterPath="$PROJECT_DIR$/src/logika/PrikazKonec.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazNapoveda.java" afterPath="$PROJECT_DIR$/src/logika/PrikazNapoveda.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazOdevzdej.java" afterPath="$PROJECT_DIR$/src/logika/PrikazOdevzdej.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazPomoc.java" afterPath="$PROJECT_DIR$/src/logika/PrikazPomoc.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazSeber.java" afterPath="$PROJECT_DIR$/src/logika/PrikazSeber.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazTrhej.java" afterPath="$PROJECT_DIR$/src/logika/PrikazTrhej.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/PrikazVypracuj.java" afterPath="$PROJECT_DIR$/src/logika/PrikazVypracuj.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/Prostor.java" afterPath="$PROJECT_DIR$/src/logika/Prostor.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/SeznamPrikazu.java" afterPath="$PROJECT_DIR$/src/logika/SeznamPrikazu.java" />
-      <change beforePath="$PROJECT_DIR$/src/logika/Vec.java" afterPath="$PROJECT_DIR$/src/logika/Vec.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" afterPath="$PROJECT_DIR$/src/main/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/Start.java" afterPath="$PROJECT_DIR$/src/main/Start.java" />
-      <change beforePath="$PROJECT_DIR$/src/uiText/TextoveRozhrani.java" afterPath="$PROJECT_DIR$/src/uiText/TextoveRozhrani.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +58,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="78" column="7" lean-forward="false" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+            <state relative-caret-position="198">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -235,7 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,37 +214,33 @@
             <path>
               <item name="github-repo" type="b2602c69:ProjectViewProjectNode" />
               <item name="github-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="github-repo" type="b2602c69:ProjectViewProjectNode" />
               <item name="github-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logika" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="github-repo" type="b2602c69:ProjectViewProjectNode" />
               <item name="github-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="github-repo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="github-repo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="uiText" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="untitled_jar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -465,18 +429,19 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24639581" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24708377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -485,13 +450,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -795,28 +759,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/gui.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logika/Ja.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logika/PrikazJdi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="18" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -832,10 +788,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/logika/PrikazJdi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="78" column="7" lean-forward="false" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+        <state relative-caret-position="198">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -848,10 +812,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>untitled:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
